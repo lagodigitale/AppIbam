@@ -13,18 +13,17 @@
     <!-- Formulaire -->
       <form action="">
         <p>WELCOME</p>
-        <ion-input type="text" placeholder="INE" clear-input ></ion-input>
+        <ion-input type="text" placeholder="INE" clear-input></ion-input>
         <ion-input type="text" placeholder="Username" clear-input ></ion-input>
-        <ion-input type="password" placeholder="Password" clear-input ></ion-input>
-        <ion-input type="text" placeholder="Sector" clear-input ></ion-input>
-        <ion-input type="text" placeholder="Licence year" clear-input ></ion-input>
+        <ion-input type="email" placeholder="email" clear-input id="email"></ion-input>
+        <ion-input type="password" placeholder="Password" clear-input id="password"></ion-input>
         <ion-button shape="round" (click)="sign_up()">Sign Up</ion-button><br>
       </form>
         <!-- Ombres -->
         <div class="ombre o1"></div>
         <div class="ombre o2"></div>
         <div class="ombre o3">
-          <span>Have you account ?<a (click)="sign_in()"> Sign In</a></span>
+          <span>Have you account ?<a (click)="signin()"> Sign In</a></span>
         </div>
         <div class="ombre o4"></div>
     </div>

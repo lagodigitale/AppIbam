@@ -23,17 +23,17 @@
         <form action="">
           <div class="email">
              <ion-icon name="send"></ion-icon>
-            <ion-input type="email" clear-input placeholder="Email">
+            <ion-input type="email" clear-input placeholder="Email" id="email">
             </ion-input>
           </div>
           <div class="password" >
             <ion-icon name="eye"></ion-icon>
-            <ion-input type="password" clear-input placeholder="Password">
+            <ion-input type="password" clear-input placeholder="Password" id="password">
             </ion-input>
           </div>
         </form>
       </div>
-      <ion-button shape="round" color="primary">Sing In</ion-button>
+      <ion-button shape="round" color="primary" (click)="sign_in()">Sing In</ion-button>
       <span>Create account ?<a (click)="sign_up()"> Sign Up</a></span>
     </div>
   </div>
