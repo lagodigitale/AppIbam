@@ -14,7 +14,7 @@ export class WelcomePage implements OnInit {
   ngOnInit() {
   }
   student() {
-    this.nc.navigateForward('/student-sign-up')
+    this.nc.navigateForward('signup')
   };
   n_student() {
     this.nc.navigateForward('/new-student-sign-up')
