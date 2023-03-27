@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import {Router} from '@angular/router';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { getDatabase, ref, get } from "firebase/database";
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class LoginPage implements OnInit {
 
 
+  id:any;
   email:any;
   pass:any;
 
@@ -22,6 +24,9 @@ export class LoginPage implements OnInit {
     this.nc.navigateForward('/welcome')
   }
 
+
+
+  
   sign_in(){
 
 
@@ -29,12 +34,16 @@ export class LoginPage implements OnInit {
     this.pass=((document.getElementById("password") as HTMLInputElement).value); 
    
 
+
+    const db = getDatabase();
+    get(ref(db, '/users/'+this.id +'/'));
+
     this.auth.
     signInWithEmailAndPassword(this.email, this.pass)
       .then((userCredential) => {
         if (userCredential.user){
 
-          this.router.navigateByUrl('/student-home');
+          this.router.navigateByUrl('/new-student-home');
         }
       })
       .catch((error) => {

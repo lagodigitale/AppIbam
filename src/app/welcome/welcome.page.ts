@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-welcome',
@@ -13,7 +14,7 @@ export class WelcomePage implements OnInit {
   ngOnInit() {
   }
   student() {
-    this.nc.navigateForward('/student-sign-up')
+    this.nc.navigateForward('signup')
   };
   n_student() {
     this.nc.navigateForward('/new-student-sign-up')

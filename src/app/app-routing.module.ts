@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { SignupComponent } from '../app/signup/signup.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'sujets-test',
+    redirectTo: 'welcome',
     pathMatch: 'full'
   },
   {
     path: 'splash-screen',
     loadChildren: () => import('./splash-screen/splash-screen.module').then( m => m.SplashScreenPageModule)
   },
+ 
   {
     path: 'welcome',
     loadChildren: () => import('./welcome/welcome.module').then( m => m.WelcomePageModule)
@@ -19,10 +21,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'student-sign-up',
-    loadChildren: () => import('./student-sign-up/student-sign-up.module').then( m => m.StudentSignUpPageModule)
-  },
+  
   {
     path: 'new-student-sign-up',
     loadChildren: () => import('./new-student-sign-up/new-student-sign-up.module').then( m => m.NewStudentSignUpPageModule)
